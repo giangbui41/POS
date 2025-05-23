@@ -1,0 +1,120 @@
+
+    :root {
+      --sidebar-width: 220px;
+      --primary-color: #00008b;
+      --sidebar-bg:#e3f2fd;
+      --sidebar-hover: #34495e;
+      --text-muted: #00008b;
+    }
+    .avatar-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    body.admin-layout {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    #main-wrapper {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      background-color: var(--sidebar-bg);
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 2px 0 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .sidebar .nav-link {
+      color: var(--text-muted);
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .sidebar .nav-link:hover {
+      background-color: var(--sidebar-hover);
+      color: #fff;
+    }
+
+    .sidebar .nav-link.active {
+      background-color: var(--primary-color);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .sidebar .sidebar-heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin: 10px 0 5px;
+      color: #bbb;
+    }
+
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      padding: 0.75rem 1rem;
+    }
+
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+
+    footer.footer {
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Sidebar */
+    @media (max-width: 991.98px) {
+      #sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 56px;
+        left: 0;
+        z-index: 1050;
+        height: calc(100vh - 56px);
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+      }
+
+      #sidebar.show {
+        transform: translateX(0);
+      }
+    }
+
+    @media (min-width: 992px) {
+      #sidebar.hide {
+        display: none !important;
+      }
+    }

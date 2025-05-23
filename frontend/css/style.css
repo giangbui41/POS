@@ -1,0 +1,23 @@
+/* Đảm bảo nội dung chính và footer nằm bên phải sidebar */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Đảm bảo footer không bị lệch */
+footer {
+    margin-left: 250px; /* Đảm bảo footer bắt đầu ngay sau sidebar */
+    width: calc(100% - 250px); /* Chiếm toàn bộ phần còn lại của màn hình */
+    display: flex;
+    align-items: center;
+}
+
+
+
+.footer p {
+    margin: 0;
+    padding-left: 20px; /* Đẩy chữ vào một chút để không quá sát */
+}
+
+

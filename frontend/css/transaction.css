@@ -1,0 +1,127 @@
+    #suggestions div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    #suggestions div:hover {
+        background-color: #f0f0f0;
+    }
+
+    #suggestions div button {
+        margin-left: 10px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    input, button {
+        padding: 8px;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    #product_search {
+        width: 300px;
+    }
+
+    #suggestions {
+        background: white;
+        border: 1px solid #ccc;
+        max-height: 150px;
+        overflow-y: auto;
+        position: absolute;
+        width: 300px;
+        z-index: 10;
+    }
+
+    #suggestions div {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    #suggestions div:hover {
+        background-color: #f0f0f0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #eee;
+    }
+
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #customer_info {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #eaf3ff;
+        border-left: 5px solid #2196F3;
+    }
+
+    #cart input[type="number"] {
+        width: 50px;
+    }
+
+    .card-body{
+        background-color: #e3f2fd;
+        border-radius: 10px;
+    }
+    .content{
+        background-color: white;
+        color:black;
+    }
+        /* ===== BASE STYLES ===== */
+    :root {
+        --primary-color: #00008b;
+        --secondary-color: #3f37c9;
+        --accent-color: #4895ef;
+        --text-color: #2b2d42;
+        --light-bg: #f8f9fa;
+        --white: #ffffff;
+        --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+        --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+        --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .content {
+        padding: 2rem;
+        min-height: calc(100vh - 100px);
+        /* background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%); */
+        display: flex;
+        flex-direction: column; /* Thay đổi hướng hiển thị các phần tử con theo cột */
+        align-items: center;
+        /* justify-content: center; */ /* Có thể bỏ hoặc điều chỉnh tùy theo ý muốn */
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
